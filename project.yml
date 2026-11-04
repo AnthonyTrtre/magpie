@@ -24,6 +24,10 @@ targets:
     type: application
     platform: macOS
     sources: [Sources, Ressources]
+    entitlements:
+      path: Magpie.entitlements
+      properties:
+        com.apple.security.cs.disable-library-validation: true   # signature Utahpik sans certificat Apple : sinon macOS refuse de charger Sparkle
     info:
       path: Info.plist
       properties:
