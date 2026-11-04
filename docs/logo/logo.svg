@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="ivory" x1="260" y1="100" x2="760" y2="924" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF5"/>
+      <stop offset=".52" stop-color="#F0EBDD"/>
+      <stop offset="1" stop-color="#D3D5C9"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="350" y1="100" x2="650" y2="924" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset=".5" stop-color="#FFFFFF" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#59665D" stop-opacity=".25"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="460" y1="280" x2="560" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#26333D"/>
+      <stop offset=".48" stop-color="#101A23"/>
+      <stop offset="1" stop-color="#080F19"/>
+    </linearGradient>
+    <linearGradient id="pearl" x1="550" y1="420" x2="550" y2="665" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset=".65" stop-color="#F9FCF7"/>
+      <stop offset="1" stop-color="#CEDCD8"/>
+    </linearGradient>
+    <linearGradient id="iridescence" x1="382" y1="655" x2="538" y2="438" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#233D78"/>
+      <stop offset=".44" stop-color="#176B88"/>
+      <stop offset=".78" stop-color="#238C91"/>
+      <stop offset="1" stop-color="#6BBEAE"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="721" y1="421" x2="795" y2="505" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF2B0"/>
+      <stop offset=".48" stop-color="#F5C45C"/>
+      <stop offset="1" stop-color="#BD761C"/>
+    </linearGradient>
+    <filter id="lift" x="180" y="230" width="670" height="620" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#253A3A" flood-opacity=".19"/>
+    </filter>
+    <clipPath id="tile">
+      <path d="M324 100H700C780 100 820 100 872 152C924 204 924 244 924 324V700C924 780 924 820 872 872C820 924 780 924 700 924H324C244 924 204 924 152 872C100 820 100 780 100 700V324C100 244 100 204 152 152C204 100 244 100 324 100Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#tile)">
+    <path d="M324 100H700C780 100 820 100 872 152C924 204 924 244 924 324V700C924 780 924 820 872 872C820 924 780 924 700 924H324C244 924 204 924 152 872C100 820 100 780 100 700V324C100 244 100 204 152 152C204 100 244 100 324 100Z" fill="url(#ivory)" stroke="url(#rim)" stroke-width="6"/>
+    <g filter="url(#lift)">
+      <path d="M394 491C431 446 482 425 526 389C535 374 530 356 537 333C548 292 580 269 622 273C671 277 704 313 700 363L774 398Q780 402 773 406L695 422C679 461 687 526 652 584C613 650 539 688 458 660L264 793Q251 802 258 784L366 575C368 538 376 512 394 491Z" fill="url(#ink)"/>
+      <path d="M575 427C610 449 651 452 681 440C680 487 682 533 650 584C615 642 543 675 477 650C524 604 555 550 566 497C571 471 571 445 575 427Z" fill="url(#pearl)"/>
+      <path d="M403 489C439 448 478 427 522 413C548 416 566 431 574 454C536 451 503 470 481 508C456 504 431 498 403 489Z" fill="url(#pearl)"/>
+      <path d="M522 459C557 452 571 483 555 525C532 586 456 637 365 678C398 600 425 530 465 486C483 467 502 458 522 459Z" fill="url(#iridescence)"/>
+      <circle cx="653" cy="345" r="12" fill="#FCFCED"/>
+      <path d="M759 404L807 454L759 517L711 454Z" fill="url(#gold)"/>
+      <path d="M759 404L759 454H711Z" fill="#FFF6C5"/>
+      <path d="M759 454H807L759 517Z" fill="#C58A2C"/>
+    </g>
+  </g>
+</svg>
