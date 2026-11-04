@@ -22,5 +22,17 @@
 	<true/>
 	<key>NSHumanReadableCopyright</key>
 	<string>Usage personnel</string>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUFeedURL</key>
+	<string>https://github.com/AnthonyTrtre/magpie/releases/latest/download/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>DOU0YZsuQSrqCEm5mezjHVUDgYv1JbOHdgEal9Q4uS8=</string>
+	<key>SUScheduledCheckInterval</key>
+	<integer>21600</integer>
+	<key>SUVerifyUpdateBeforeExtraction</key>
+	<true/>
 </dict>
 </plist>

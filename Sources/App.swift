@@ -1,6 +1,7 @@
 import AppKit
 import SocleBarreDeMenus
 import SocleCore
+import Sparkle
 import SwiftUI
 
 @main
@@ -11,6 +12,9 @@ struct MagpieApp: App {
         Settings { EmptyView() }  // tout se règle depuis le menu de l'icône
     }
 }
+
+/// Mises à jour intégrées (Sparkle) : archives signées EdDSA, vérifiées avant installation.
+@MainActor let miseAJour = SPUStandardUpdaterController(startingUpdater: false, updaterDelegate: nil, userDriverDelegate: nil)
 
 @MainActor
 final class Delegue: NSObject, NSApplicationDelegate, NSMenuDelegate {
@@ -32,6 +36,7 @@ final class Delegue: NSObject, NSApplicationDelegate, NSMenuDelegate {
         item.menu = menu
         controleur.demarrer()
         OuvertureALaConnexion.activerAuPremierLancement()
+        miseAJour.startUpdater()
         Journal.app.info("Magpie démarré, \(self.controleur.historique.elements.count) éléments")
     }
 
@@ -66,6 +71,7 @@ final class Delegue: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItem(ItemAction("Vider l'historique…") { [weak self] in self?.confirmerVidage() })
         menu.addItem(ItemAction("Ouvrir à la connexion", coche: OuvertureALaConnexion.active) { OuvertureALaConnexion.basculer() })
         menu.addItem(.separator())
+        menu.addItem(ItemAction("Rechercher des mises à jour…") { NSApp.activate(); miseAJour.checkForUpdates(nil) })
         menu.addItem(ItemAction("À propos de Magpie") {
             NSApp.activate()
             NSApp.orderFrontStandardAboutPanel(nil)
